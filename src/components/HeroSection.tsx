@@ -5,12 +5,12 @@ import heroImage from "@/assets/hero-farming.jpg";
 
 const HeroSection = () => {
   const features = [
-    { icon: Cloud, title: "Weather Alerts", description: "Real-time weather updates for your region" },
-    { icon: TrendingUp, title: "Crop Pricing", description: "District-wise current market prices" },
-    { icon: MessageCircle, title: "AI Assistant", description: "Multilingual chatbot support" },
-    { icon: Camera, title: "Disease Analysis", description: "AI-powered crop disease detection" },
-    { icon: FileText, title: "Latest News", description: "Agricultural news and updates" },
-    { icon: Gift, title: "Gov Schemes", description: "Information on government programs" },
+    { icon: "🌦️", title: "मौसम की जानकारी", description: "आज और कल का मौसम" },
+    { icon: "💰", title: "फसल की कीमत", description: "आज की मंडी भाव" },
+    { icon: "🤖", title: "सहायक", description: "सवाल पूछें, जवाब पाएं" },
+    { icon: "📸", title: "बीमारी पहचान", description: "फोटो खींचकर देखें" },
+    { icon: "📰", title: "खबरें", description: "खेती की नई जानकारी" },
+    { icon: "🏛️", title: "सरकारी योजना", description: "मदद और सब्सिडी" },
   ];
 
   return (
@@ -18,41 +18,39 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
-                Smart Farming
-                <span className="bg-gradient-hero bg-clip-text text-transparent"> Advisory</span>
+            <div className="space-y-6">
+              <h1 className="text-3xl lg:text-5xl font-bold text-foreground leading-tight">
+                🌾 किसान मित्र
                 <br />
-                for Better Harvest
+                <span className="text-2xl lg:text-3xl text-muted-foreground">बेहतर फसल के लिए</span>
               </h1>
-              <p className="text-lg text-muted-foreground max-w-xl">
-                Empowering small and marginal farmers with AI-driven insights, real-time weather alerts, 
-                market pricing, and comprehensive crop management solutions.
+              <p className="text-xl text-foreground max-w-xl font-medium">
+                मौसम • फसल की कीमत • बीमारी पहचान • सरकारी योजना
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-hero hover:opacity-90 transition-opacity shadow-soft">
-                Start Your Journey
-                <ArrowRight className="ml-2 h-5 w-5" />
+            <div className="flex flex-col gap-4 w-full max-w-md">
+              <Button size="lg" className="bg-gradient-hero hover:opacity-90 transition-opacity shadow-soft h-16 text-xl font-bold">
+                🚀 शुरू करें
+                <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
-              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10">
-                Watch Demo
+              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10 h-16 text-xl font-bold">
+                📱 ऐप देखें
               </Button>
             </div>
             
-            <div className="flex items-center space-x-8 text-sm text-muted-foreground">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-emerald rounded-full"></div>
-                <span>50,000+ Farmers</span>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-8 text-lg text-foreground font-medium">
+              <div className="flex items-center space-x-3">
+                <div className="w-4 h-4 bg-emerald rounded-full"></div>
+                <span>👨‍🌾 50,000+ किसान</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-earth rounded-full"></div>
-                <span>15+ Languages</span>
+              <div className="flex items-center space-x-3">
+                <div className="w-4 h-4 bg-earth rounded-full"></div>
+                <span>🗣️ हिंदी में बात</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-sky rounded-full"></div>
-                <span>24/7 Support</span>
+              <div className="flex items-center space-x-3">
+                <div className="w-4 h-4 bg-sky rounded-full"></div>
+                <span>📞 24 घंटे मदद</span>
               </div>
             </div>
           </div>
@@ -71,14 +69,12 @@ const HeroSection = () => {
         
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <Card key={index} className="p-6 hover:shadow-card transition-all duration-300 border-border/50 hover:border-primary/30">
-              <div className="flex items-center space-x-4">
-                <div className="bg-gradient-hero p-3 rounded-lg">
-                  <feature.icon className="h-6 w-6 text-primary-foreground" />
-                </div>
+            <Card key={index} className="p-8 hover:shadow-card transition-all duration-300 border-border/50 hover:border-primary/30 cursor-pointer hover:scale-105">
+              <div className="text-center space-y-4">
+                <div className="text-5xl">{feature.icon}</div>
                 <div>
-                  <h3 className="font-semibold text-foreground">{feature.title}</h3>
-                  <p className="text-sm text-muted-foreground">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-foreground">{feature.title}</h3>
+                  <p className="text-lg text-muted-foreground mt-2">{feature.description}</p>
                 </div>
               </div>
             </Card>

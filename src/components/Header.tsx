@@ -9,36 +9,30 @@ const Header = () => {
           <div className="bg-gradient-hero p-2 rounded-lg">
             <Leaf className="h-6 w-6 text-primary-foreground" />
           </div>
-          <h1 className="text-xl font-bold text-foreground">CropAdvisor</h1>
+          <h1 className="text-xl font-bold text-foreground">🌾 किसान मित्र</h1>
         </div>
         
-        <nav className="hidden md:flex space-x-6">
-          <a href="#weather" className="text-muted-foreground hover:text-primary transition-colors">
-            Weather
+        <nav className="hidden md:flex space-x-8">
+          <a href="#weather" className="text-foreground hover:text-primary transition-colors font-semibold text-lg flex items-center gap-2">
+            🌦️ मौसम
           </a>
-          <a href="#pricing" className="text-muted-foreground hover:text-primary transition-colors">
-            Crop Pricing
+          <a href="#pricing" className="text-foreground hover:text-primary transition-colors font-semibold text-lg flex items-center gap-2">
+            💰 कीमत
           </a>
-          <a href="#chatbot" className="text-muted-foreground hover:text-primary transition-colors">
-            AI Assistant
+          <a href="#chatbot" className="text-foreground hover:text-primary transition-colors font-semibold text-lg flex items-center gap-2">
+            🤖 सहायक
           </a>
-          <a href="#schemes" className="text-muted-foreground hover:text-primary transition-colors">
-            Gov Schemes
-          </a>
-          <a href="#news" className="text-muted-foreground hover:text-primary transition-colors">
-            News
+          <a href="#schemes" className="text-foreground hover:text-primary transition-colors font-semibold text-lg flex items-center gap-2">
+            🏛️ योजना
           </a>
         </nav>
         
         <div className="flex items-center space-x-4">
-          <Button variant="outline" className="hidden md:inline-flex">
-            Sign In
+          <Button className="bg-gradient-hero hover:opacity-90 transition-opacity h-12 px-6 text-lg font-bold">
+            📱 ऐप डाउनलोड
           </Button>
-          <Button className="bg-gradient-hero hover:opacity-90 transition-opacity">
-            Get Started
-          </Button>
-          <Button variant="ghost" size="icon" className="md:hidden">
-            <Menu className="h-5 w-5" />
+          <Button variant="ghost" size="icon" className="md:hidden h-12 w-12">
+            <Menu className="h-6 w-6" />
           </Button>
         </div>
       </div>
